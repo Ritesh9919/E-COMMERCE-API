@@ -8,7 +8,16 @@ const getAllProducts = async(req, res) => {
 
 
 const addProduct = async(req, res) => {
-   
+    
+    const {name, price, size} = req.body;
+    await Product.create({
+        name,
+        price,
+        size,
+        imageUrl:req.file.filename
+    });
+
+    res.status(201).send("Product added");
 }
 
 module.exports = {

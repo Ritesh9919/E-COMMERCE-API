@@ -7,14 +7,12 @@ const productSchema = new mongoose.Schema({
     imageUrl:{
         type:String
     },
-    category:{
-        type:String
-    },
+    
     price:{
         type:Number
     },
     size:{
-        type:Number
+        type:String
     }
 });
 
