@@ -1,6 +1,7 @@
 const Product = require('./product_model');
 
 const getAllProducts = async(req, res) => {
+    console.log(req.user);
     const {name} = req.query;
     const queryObj = {};
     if(name) {
